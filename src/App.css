@@ -60,3 +60,12 @@
 .card p span {
   color: #ffde59;
 }
+
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-family: Cormorant Garamond;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
