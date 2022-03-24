@@ -13,6 +13,7 @@ const App = () => {
     TrainNumber: [],
     DirectionNum: [],
     ServiceType: [],
+    CarCount: [],
   });
 
   // Filter Titles for Dropdown
@@ -21,7 +22,8 @@ const App = () => {
     DestinationStationCode: "Destination Station",
     TrainNumber: "Train Number",
     DirectionNum: "Up / Down",
-    ServiceType: "Service Type"
+    ServiceType: "Service Type",
+    CarCount: "Car Count",
   };
 
   // Initializing filters
@@ -30,7 +32,8 @@ const App = () => {
     DestinationStationCode: "all",
     TrainNumber: "all",
     DirectionNum: "all",
-    ServiceType: "all"
+    ServiceType: "all",
+    CarCount: "all",
   });
 
   const fetchTrains = () => {
@@ -69,7 +72,8 @@ const App = () => {
       DestinationStationCode: getArrayOfOptions("DestinationStationCode"),
       TrainNumber: getArrayOfOptions("TrainNumber"),
       DirectionNum: getArrayOfOptions("DirectionNum"),
-      ServiceType: getArrayOfOptions("ServiceType")
+      ServiceType: getArrayOfOptions("ServiceType"),
+      CarCount: getArrayOfOptions("CarCount"),
     }))
   }, [trains, filters])
 
