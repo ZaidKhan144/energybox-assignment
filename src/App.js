@@ -6,12 +6,13 @@ const App = () => {
 
   const [ trains, setTrains ] = useState([])
 
-  // Dropdowns
+  // Initializing Dropdowns array for options
   const [ddOptions, setDdOptions] = useState({
     LineCode: [],
     DestinationStationCode: [],
     TrainNumber: [],
-    DirectionNum: []
+    DirectionNum: [],
+    ServiceType: [],
   });
 
   // Filter Titles for Dropdown
@@ -19,14 +20,17 @@ const App = () => {
     LineCode: "Train Line Color",
     DestinationStationCode: "Destination Station",
     TrainNumber: "Train Number",
-    DirectionNum: "Up / Down"
+    DirectionNum: "Up / Down",
+    ServiceType: "Service Type"
   };
 
+  // Initializing filters
   const [filters, setFilters] = useState({
     LineCode: "all",
     DestinationStationCode: "all",
     TrainNumber: "all",
-    DirectionNum: "all"
+    DirectionNum: "all",
+    ServiceType: "all"
   });
 
   const fetchTrains = () => {
@@ -64,7 +68,8 @@ const App = () => {
       LineCode: getArrayOfOptions("LineCode"),
       DestinationStationCode: getArrayOfOptions("DestinationStationCode"),
       TrainNumber: getArrayOfOptions("TrainNumber"),
-      DirectionNum: getArrayOfOptions("DirectionNum")
+      DirectionNum: getArrayOfOptions("DirectionNum"),
+      ServiceType: getArrayOfOptions("ServiceType")
     }))
   }, [trains, filters])
 
